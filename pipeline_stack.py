@@ -2,12 +2,8 @@ from constructs import Construct
 from aws_cdk import (
     Stack,
     pipelines,
-    aws_codepipeline_actions as codepipeline_actions,
     SecretValue,
 )
-
-from aws_cdk.aws_secretsmanager import Secret
-
 
 class PipelineStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
