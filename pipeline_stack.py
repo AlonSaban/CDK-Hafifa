@@ -42,6 +42,6 @@ class PipelineStack(Stack):
         pipeline = pipelines.CodePipeline(
             self,
             "Pipeline",
-            pipeline_name="LintAndSynthPipeline",
+            pipeline_name="SynthPipeline",
             synth=synth_step,
         )
