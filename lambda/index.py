@@ -1,6 +1,6 @@
 import json
-import boto3
 import time
+import boto3
 
 def lambda_handler(event, context):
     # Initialize S3 and SSM clients
