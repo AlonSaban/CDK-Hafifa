@@ -13,8 +13,6 @@ class PipelineStack(Stack):
         repo_name = "CDK-Hafifa"
         github_branch = "main"
         repo_owner = "AlonSaban"
-
-        # Retrieve GitHub token from AWS Secrets Manager
         secret_name = "hafifa/github_token"
 
         github_secret = SecretValue.secrets_manager(
