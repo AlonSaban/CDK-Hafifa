@@ -27,15 +27,15 @@ class PipelineStack(Stack):
         )
 
         # Add a lint step as a pre-step
-        # lint_step = pipelines.CodeBuildStep(
-        #     "Lint",
-        #     input=source,
-        #     commands=[
-        #         "pip install -r requirements.txt",
-        #         "pip install pylint",
-        #         "pylint **/*.py",
-        #     ],
-        # )
+        lint_step = pipelines.CodeBuildStep(
+            "Lint",
+            input=source,
+            commands=[
+                "pip install -r requirements.txt",
+                "pip install pylint",
+                "pylint **/*.py",
+            ],
+        )
 
         # Create the synth step
         synth_step = pipelines.ShellStep(
@@ -57,4 +57,4 @@ class PipelineStack(Stack):
         )
 
         # Add the lint step as a pre-step to the pipeline
-        # pipeline.add_wave("lint", pre=[lint_step])
+        pipeline.add_wave("lint", pre=[lint_step])
