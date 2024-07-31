@@ -8,3 +8,4 @@ ENV = cdk.Environment(account="472043656714", region="eu-west-1")
 S3ToEC2Stack(app, "S3ToEC2Stack", env=ENV)
 PipelineStack(app, "PipelineStack", env=ENV)
 app.synth()
+
