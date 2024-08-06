@@ -57,4 +57,4 @@ class PipelineStack(Stack):
         )
 
         # Add the lint step as a pre-step to the pipeline
-        # pipeline.add_wave("lint", pre=[lint_step])
+        pipeline.add_wave("lint", pre=[lint_step])
